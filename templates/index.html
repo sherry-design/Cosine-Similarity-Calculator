@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cosine Similarity Calculator</title>
+</head>
+<body>
+    <h1>Cosine Similarity Calculator</h1>
+    <form method="POST" action="/calculate">
+       
+        <br> 
+        <h2>Vector A:</h2>
+        {% for i in range(size) %}  <!-- template variable  part of a template engine  -->
+        <label for="a_{{ i }}">a[{{ i }}]:</label>
+        <input type="number" name="a_{{ i }}" step="1" required>
+        <br>
+        {% endfor %}
+        <h2>Vector B:</h2>
+        {% for i in range(size) %}
+        <label for="b_{{ i }}">b[{{ i }}]:</label>
+        <input type="number" name="b_{{ i }}" step="1" required>
+        <br>
+        {% endfor %}
+        <br>
+        <input type="submit" value="Calculate Cosine Similarity">
+    </form>
+</body>
+</html>
